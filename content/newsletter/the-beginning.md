@@ -9,6 +9,7 @@ videos:
     url: "https://www.youtube.com/watch?v=BLl3xREFEsY"
   - title: "FLORIDA"
     url: "https://www.youtube.com/watch?v=-hlkzIaF0nU&t=2167s"
+---
 
 
 I thought a newsletter would be a cool idea,  I’m aiming for one per week. 
