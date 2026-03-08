@@ -7,6 +7,7 @@ import Navigation from './Navigation';
 
 const bannerImages = {
   '/': '/banner-logo.png',
+  '/newsLetter' : '/banner-newsletter.png',
   '/projects': '/banner-projects.png',
   '/about': '/banner-about.png',
 };
@@ -14,7 +15,12 @@ const bannerImages = {
 export default function HeaderWrapper() {
   const [bannerHidden, setBannerHidden] = useState(false);
   const pathname = usePathname();
-  const bannerImage = bannerImages[pathname] || '/banner-logo.png';
+  const getBannerImage = () => {
+    if (bannerImages[pathname]) return bannerImages[pathname];
+    if (pathname.startsWith('/newsLetter')) return '/banner-newsletter.png';
+    return '/banner-logo.png';
+  };
+  const bannerImage = getBannerImage();
 
   useEffect(() => {
     function handleScroll() {

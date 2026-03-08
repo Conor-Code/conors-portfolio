@@ -8,7 +8,7 @@ export default function About() {
   ];
 
   return (
-    <div className="max-w-3xl mx-auto px-5 pt-12 sm:pt-16 pb-20">
+    <div className="max-w-3xl mx-auto px-5 pt-12 sm:pt-12 pb-20">
       {/* Header */}
       <div className="mb-10 opacity-0 animate-fade-up">
         <h1 className="font-display font-bold text-3xl sm:text-4xl text-text-primary tracking-tight mb-2">

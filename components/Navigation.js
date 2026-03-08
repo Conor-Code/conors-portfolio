@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 
 const navItems = [
   { label: 'Home',    href: '/' },
+  { label: 'Newsletter', href: '/newsLetter' },
   { label: 'Projects', href: '/projects' },
   { label: 'About',    href: '/about' },
   { label: 'X',        href: 'https://x.com/Conor_Code', external: true },
@@ -18,9 +19,6 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-5 h-14 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <span className="font-display font-semibold text-text-primary text-sm tracking-tight hidden sm:inline">
-            Conor Collins
-          </span>
-          <span className="font-display font-semibold text-text-primary text-sm tracking-tight sm:hidden">
             Conor C.
           </span>
         </Link>

@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import supabase from '@/lib/supabase';
 
 export default function WaitlistForm({ compact = false }) {
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('idle'); // idle | loading | success | error
+  const [status, setStatus] = useState('idle');
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -12,15 +13,18 @@ export default function WaitlistForm({ compact = false }) {
 
     setStatus('loading');
 
-    // TODO: Replace with your actual Supabase/Formspree endpoint
-    // For now, simulating a successful submission
     try {
-      // Example Supabase integration:
-      // const { error } = await supabase.from('waitlist').insert({ email });
-      // if (error) throw error;
+      const { error } = await supabase
+        .from('waitlist')
+        .insert({ email });
 
-      // Simulated delay
-      await new Promise((r) => setTimeout(r, 800));
+      if (error) {
+        if (error.code === '23505') {
+          setStatus('success');
+          return;
+        }
+        throw error;
+      }
       setStatus('success');
       setEmail('');
     } catch (err) {
@@ -48,7 +52,7 @@ export default function WaitlistForm({ compact = false }) {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="your@email.com"
+          placeholder="Your Email"
           required
           className={`flex-1 bg-bg-tertiary border border-border rounded-xl px-4 font-body text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-all duration-200 ${
             compact ? 'py-2.5' : 'py-3'
@@ -77,7 +81,7 @@ export default function WaitlistForm({ compact = false }) {
       {status === 'error' && (
         <p className="text-sm text-red-400 mt-2 font-body">Something went wrong. Try again?</p>
       )}
-      <p className={`text-text-muted font-body mt-2 ${compact ? 'text-xs' : 'text-xs'}`}>
+      <p className={`text-text-muted font-body mt-2 text-xs`}>
         No spam, just updates when it&apos;s ready. Beta spots are limited.
       </p>
     </div>

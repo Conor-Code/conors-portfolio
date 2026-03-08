@@ -63,8 +63,19 @@ export default function Home() {
         <p className="text-text-secondary font-body text-base sm:text-lg leading-relaxed max-w-xl mb-4 opacity-0 animate-fade-up stagger-2">
           You ship code every day, but turning commits and ideas into posts that feel authentic takes time.
         </p>
-        <p className="text-text-secondary font-body text-base sm:text-lg leading-relaxed max-w-xl mb-8 opacity-0 animate-fade-up stagger-2">
+        <p className="text-text-secondary font-body text-base sm:text-lg leading-relaxed max-w-xl mb-1 opacity-0 animate-fade-up stagger-2">
           <span className="text-text-primary font-medium"> The Daily Ship</span> changes that. Effortlessly.
+        </p>
+        <p className="mb-4 opacity-0 animate-fade-up stagger-2">
+          <Link
+            href="/newsLetter/the-beginning"
+            className="inline-flex items-center text-sm text-accent hover:text-accent-hover transition-colors font-body"
+          >
+            Read more about The Daily Ship
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </p>
 
         {/* Waitlist CTA */}

@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function Banner({ hidden, image }) {
   return (
     <div
@@ -8,10 +10,13 @@ export default function Banner({ hidden, image }) {
       }`}
       style={{ height: '160px' }}
     >
-      <img
+      <Image
         src={image}
         alt="Banner"
-        className="h-[120px] sm:h-[140px] object-contain py-3"
+        width={400}
+        height={140}
+        className="h-[120px] sm:h-[140px] w-auto object-contain py-3"
+        priority
       />
     </div>
   );

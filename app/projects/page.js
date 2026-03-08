@@ -77,15 +77,12 @@ export default function Projects() {
   const others = projects.filter((p) => !p.featured);
 
   return (
-    <div className="max-w-3xl mx-auto px-5 pt-16 sm:pt-16 pb-20">
+    <div className="max-w-3xl mx-auto px-5 pt-12 sm:pt-12 pb-20">
       {/* Header */}
       <div className="mb-10 opacity-0 animate-fade-up">
         <h1 className="font-display font-bold text-3xl sm:text-4xl text-text-primary tracking-tight mb-2">
           Projects
         </h1>
-        <p className="text-text-secondary font-body text-base">
-          Things I&apos;ve built, am building, and plan to ship.
-        </p>
       </div>
 
       {/* Featured - The Daily Ship */}
@@ -114,8 +111,6 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-
-              <WaitlistForm compact />
             </div>
           </div>
         </div>
