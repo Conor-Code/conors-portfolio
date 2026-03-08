@@ -2,6 +2,13 @@
 title: "Week 1: The Beginning"
 date: "2026-03-8"
 summary: "Why I'm starting this newsletter, what I'm where I'm at, and what The Daily Ship is all about."
+videos:
+  - title: "I Tried Starting a Newsletter for 100 Days"
+    url: "https://www.youtube.com/watch?v=t-0umruJHLM"
+  - title: "The fear of being average"
+    url: "https://www.youtube.com/watch?v=BLl3xREFEsY"
+  - title: "FLORIDA"
+    url: "https://www.youtube.com/watch?v=-hlkzIaF0nU&t=2167s"
 ---
 
 I thought a newsletter would be a cool idea,  I’m aiming for one per week. 
