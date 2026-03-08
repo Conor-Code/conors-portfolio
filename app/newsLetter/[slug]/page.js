@@ -3,7 +3,10 @@ import { getPostBySlug, getAllPosts, getAllSlugs } from '@/lib/newsletter';
 import { notFound } from 'next/navigation';
 import MarkdownContent from '@/components/MarkdownContent';
 import NewsletterSubscribe from '@/components/NewsletterSubscribe';
+<<<<<<< HEAD
 import VideoCards from '@/components/VideoCards';
+=======
+>>>>>>> bdda4a93c2fc445c9c35bbfae468a53c5fc4d585
 
 export function generateStaticParams() {
   const slugs = getAllSlugs();
@@ -70,11 +73,14 @@ export default function NewsletterPost({ params }) {
         <MarkdownContent content={post.content} />
       </div>
 
+<<<<<<< HEAD
       {/* Videos */}
       <div className="opacity-0 animate-fade-up stagger-2">
         <VideoCards videos={post.videos} />
       </div>
 
+=======
+>>>>>>> bdda4a93c2fc445c9c35bbfae468a53c5fc4d585
       {/* Subscribe CTA */}
       <div className="mt-12 p-6 bg-bg-secondary/60 border border-border rounded-2xl opacity-0 animate-fade-up stagger-2">
         <p className="font-display font-semibold text-sm text-text-primary mb-3">
