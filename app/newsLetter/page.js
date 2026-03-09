@@ -5,6 +5,21 @@ import NewsletterSubscribe from '@/components/NewsletterSubscribe';
 export const metadata = {
   title: 'Newsletter',
   description: 'Weekly build updates, learnings, and progress on The Daily Ship.',
+  openGraph: {
+    title: 'Newsletter — Conor Collins',
+    description: 'Weekly build updates, learnings, and cool videos.',
+    images: [
+      {
+        url: 'https://conors-portfolio-live.vercel.app/og-newsletter.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['https://conors-portfolio-live.vercel.app/og-newsletter.png'],
+  },
 };
 
 function formatDate(dateStr) {
